@@ -1,0 +1,44 @@
+.cnav_box .cnav image{
+    display: block;
+    width: 80%;
+    margin: auto;
+    height:0px 
+}
+.cnav_box .cnav{
+  width: 32%;
+  margin:0 1%;
+    float: left;
+    margin-bottom: 2%;
+    background:#fff;
+}
+.cnav_box .nav-name{
+    display:block;
+    font-size:14px;
+    color: #2b2e33;
+    border-bottom: 2rpx solid transparent;
+    padding:10rpx 0;
+    text-align:center;
+}
+.cnav_box .cnav navigator{
+  display: block;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    padding: 5% 0px 0;
+}
+.cpro_box{
+   padding: 20rpx
+}
+.cpro_box .cnav{
+  width:48%;
+}
+
+.cpro_box .nav-name{
+  height: 50rpx;
+    line-height: 50rpx;
+    color: #555;
+    border-top: 1px solid #e5e5e5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

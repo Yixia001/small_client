@@ -1,0 +1,111 @@
+<import src="../../common/template.wxml" />
+<import src="../../wxParse/wxParse.wxml" />
+
+<!--轮播图开始-->
+<swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{ban}}" wx:key="key">
+    <swiper-item>
+      <image src="{{item.titlepic}}" class="slide-image" mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+<!--end-->
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" class="list" bindscrolltolower="bindDownLoad" bindscroll="scroll" bindscrolltoupper="refresh">
+  <view wx:for="{{Content}}" class="wxParse" wx:key="key">
+    <view class="Content">
+      <text class="wxParse-h1">{{item.title}}</text>
+      <view class="tip1">
+        <text class="time">{{item.newstime}}</text>
+
+        <text class="time link" wx:if="{{item.befrom}}"> {{item.befrom}}</text>
+      </view>
+      <view class="video" wx:if="{{item.videourl}}">
+        <video id="myVideo" src="{{item.videourl}}" enable-danmu danmu-btn controls></video>
+      </view>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+
+      <view class="praise_btn_line" bindtap="diggtop">
+        <view class="digbg">
+          <text class="praise_text">赞</text>
+        </view>
+        <view class="praise_data">
+          <text> {{item.diggtop}}</text>
+          <view class="data_arrow"></view>
+        </view>
+
+      </view>
+
+      <view class="tip2">
+        <text class="time">浏览：{{item.onclick}}</text>
+        <text class="time" style="margin-right:0;">分类：</text>
+        <navigator url="{{item.xcxurl}}" style="display:initial">
+          <text class="time link"> {{item.classname}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<template is="xinlingdi" data="{{hidd}}" />
+<template is="loadings" data="{{loading,loadtxt}}" />
+
+<!--悬浮客服-->
+<view>
+  <contact-button type="default-dark" size="20" session-from="weapp" class="img-plus-style zindex100 yc">
+  </contact-button>
+  <image src="../../image/xk_kefu.png" class="img-plus-style"></image>
+  <image src="../../image/xk_tel.png" class="img-plus-style1" bindtap="calling"></image>
+</view>
+<view>
+  <view class="swiper-tab">
+    <view class="bre swiper-tab-list {{tab==0 ? 'on' : ''}}" data-current="0" bindtap="tab_click">线上打卡</view>
+    <view class="swiper-tab-list {{tab==1 ? 'on' : ''}}" data-current="1" bindtap="tab_click">评论留言</view>
+  </view>
+  <block wx:if='{{tab==0}}'>
+  <view class='tab_0'>
+    <view>地点：{{Content[0].title}}</view>
+    <view>时间：{{Content[0].newstime}}</view>
+    <button class='tab_0_btn' bindtap='tab_0_btn'>确认打卡</button></view>
+  </block>
+  <block wx:if='{{tab==1}}'>
+    <view class='tab3_lunbo page_row'>
+      <!-- <navigator url='../index/post_msg/post_msg'> -->
+      <input class="post_message_input" placeholder="我要评论... ..." bindinput='comment_msg' />
+      <!-- </navigator> -->
+      <button bindtap='comment'>评论</button>
+    </view>
+  <scroll-view scroll-y style="height: 800px;" lower-threshold="1" bindscrolltolower="lower">
+    <block wx:for="{{comment}}">
+      <view class="user_msg_list">
+        <view class='page_row '>
+          <image class='user_head' wx:if="{{item.discuss_head}}" src='{{item.discuss_head}}'></image>
+          <image class='user_head' wx:if="{{!item.discuss_head}}" src='../../image/03.png'></image>
+          <view class='page_clu'>
+            <text class='user_name' wx:if="{{item.discuss_nickname}}">{{item.discuss_nickname}}</text>
+            <text class='user_name' wx:if="{{!item.discuss_nickname}}">匿名用户</text>
+            <text class='user_time'>{{item.time_set}}</text>
+          </view>
+        </view>
+        <view class='view_outers'>
+          <block wx:for="{{item.image}}" wx:if="{{item.image}}" wx:key="index">
+            <image class='view_li' src='{{img}}{{item}}'></image>
+          </block>
+        </view>
+        <view class='user_msg_centent top_20'>{{item.content}} </view>
+        <!-- <view class='top_20'>
+          <navigator class='user_msg_centent_arr' url='./detail_msg/detail_msg?info_id={{item.id}}'>
+            <text>全文</text>
+          </navigator>
+          <view class='page_row user_msg_icon'>
+            <image src='../../image/ping.png'></image>
+            <text>  {{item.num_write}}</text>
+            <image wx:if="{{item.is_say_yes ==false}}" bindtap='zan' data-id='{{item.id}}' src='../../image/zan1.png'></image>
+            <image wx:if="{{item.is_say_yes ==true}}" bindtap='zan' data-id='{{item.id}}' src='../../image/zan2.png'></image>
+            <text> {{item.num_say_yes}}</text>
+          </view>
+        </view> -->
+      </view>
+    </block>
+  </scroll-view>
+  </block>
+</view>

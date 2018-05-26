@@ -1,0 +1,120 @@
+<import src="../../common/template.wxml"/>
+<!--轮播图开始-->
+    <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+        <block wx:for="{{ban}}" wx:key="key">
+            <swiper-item>
+                <image src="{{item.titlepic}}" class="slide-image" mode="widthFix"/>
+            </swiper-item>
+        </block>
+    </swiper>
+<!--end-->
+<!--首页导航图标开始-->
+<view class="cnav_box aboutnav">
+  <block wx:for="{{navlink}}" wx:key="key">
+          <view class="cnav li{{index}}">
+            <navigator url="{{item.xcxurl}}">
+              <image src="{{item.classimg}}"  mode="widthFix"/>
+             <text class="nav-name">{{item.classname}}</text>
+             </navigator>
+             </view>
+
+      </block>
+     </view>
+    
+<!--end-->
+<!--广告-->
+<view class="cnav_box" bindtap="calling" hidden="{{hidd}}">
+ <image class="indexad" src="../../image/pic01.jpg"  mode="widthFix"/>
+ </view>
+ <!--end-->
+<!--关于我们-->
+<view class="cnav_box" hidden="{{hidd}}">
+<view class="cabout_box">
+<view class="tit">
+            <view>
+            <text class="en">Company Profile</text>
+             </view>
+              <view>
+            <text class="china">关于我们</text>
+             </view>
+            <view class="line"></view>
+        </view>
+<view class="txt">
+{{intro}}
+        </view>
+        <view class="c_more">
+            <navigator url="{{xcxurl}}"><image class="goto" src="../../image/ico-go.png"  mode="widthFix"/></navigator>
+            <text class="more">About us</text>
+        </view>
+          </view>
+ </view>
+  <!--end-->
+<!--列表-->
+<view wx:if="{{list}}">
+ <block wx:for="{{list}}" wx:key="key">
+  <view class="listNews" >
+   <navigator url="../view/view?classid={{item.classid}}&id={{item.id}}" class="roundList" >
+   <view wx:if="{{item.titlepic}}" class="listBox">
+   <image src="{{item.titlepic}}" data-id="{{item.b}}"  class="boxPic" width="100%" height="100%"/>
+   </view>
+   <view wx:else>
+    </view>
+   <view class="listTitle">
+   <text class="text">{{item.title}}</text>
+   </view>
+   <view class="listsmalltext">
+   <text class="text">{{item.smalltext}}</text>
+   </view>
+    <view class="pl">
+    <image src="../../image/time.png" mode="widthFix" class="tubiao" />
+   <text class="entry-content">{{item.newstime}}</text>
+    <image src="../../image/hot.png" mode="widthFix" class="tubiao" />
+    <text class="entry-content1">{{item.onclick}}</text>
+   </view>
+     </navigator>
+  </view>
+ </block>
+</view>
+<view wx:else style="margin:50rpx auto;">
+ <template is="message" data="{{hidd}}"/>
+</view>
+  <!--end-->
+<!--产品案例等-->
+<view class="cnav_box">
+<view class="tit" hidden="{{hidd}}">
+            <view>
+            <text class="en">{{probname}}</text>
+             </view>
+              <view>
+            <text class="china">{{proclassname}}</text>
+             </view>
+            <view class="line"></view>
+        </view>
+<view class="cpro_box" >
+ <block wx:for="{{product}}" wx:key="key">
+        <view class="cnav li{{index}}">
+            <navigator url="../view/view?classid={{item.classid}}&id={{item.id}}">
+              <image src="{{item.titlepic}}"  mode="widthFix"/>
+             <text class="nav-name">{{item.title}}</text>
+             </navigator>
+             </view>
+              </block>
+            
+
+          </view>
+             <view class="cpro_more" hidden="{{hidd}}">
+            <navigator url="{{proclassurl}}">  <text class="more">查看更多+</text></navigator>
+          
+        </view>
+ </view>
+  <!--end-->
+ <template is="xinlingdi" data="{{hidd}}"/>
+ <template is="loadings" data="{{loading,loadtxt}}" />
+<!--悬浮客服-->
+ <view>  
+  <contact-button type="default-dark" size="20" session-from="weapp" class="img-plus-style zindex100 yc">
+</contact-button>
+  <image src="../../image/xk_kefu.png" class="img-plus-style"></image> 
+  <image src="../../image/xk_tel.png" class="img-plus-style1" bindtap="calling"></image>
+</view>

@@ -1,0 +1,567 @@
+.cnav_box {
+    padding: 15rpx;
+    border-radius: 6%;
+}
+.cnav_box .cnav{
+    width: 31%;
+    margin:0 1%;
+    float: left;
+    margin-bottom: 2%;
+    background:#fff;
+    border-radius: 6%;
+}
+.cnav_box .cnav navigator{
+  display: block;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    padding: 5% 0px 0;
+}
+.cnav_box .cnav image{
+    display: block;
+    width:90%;
+    margin:0 auto 10rpx;
+    height:0px 
+}
+.cnav_box .nav-name{
+    display:block;
+    font-size:14px;
+    color: #2b2e33;
+    border-bottom: 2rpx solid transparent;
+    padding:10rpx 0;
+    text-align:center;
+}
+
+.indexad{
+  width:720rpx;
+  border-radius:12rpx;
+
+}
+.cabout_box{
+   background:#fff;
+   padding: 20rpx;
+   border-radius:10rpx;
+}
+.cabout_box .tit,.cnav_box .tit{
+  text-align: center;
+  padding: 20rpx 0;
+}
+.cabout_box .tit .en,.cnav_box .tit .en{
+      color: #000;
+    font-size: 15px;
+    font-family: arial;
+}
+.cabout_box .tit .china,.cnav_box .tit .china{
+      color: #666;
+    font-size: 14px;
+}
+.cabout_box .tit .line,.cnav_box .tit .line{
+    width: 50rpx;
+    height:1px;
+    background: #363636;
+    margin: 0 auto;
+    margin-top: 5rpx;
+}
+.cabout_box .txt{
+  line-height: 32px;
+    color: #555;
+    font-size: 14px;
+    text-indent:60rpx;
+}
+.cabout_box .c_more{
+  border-top: 1rpx solid #A1A1A1;
+    width: 100%;
+    padding-top: 10rpx;
+    margin-top: 10rpx;
+}
+.cabout_box .c_more .more{
+  font-family: arial;
+    color: #666;
+    font-size: 14px;
+    line-height: 17rpx;
+}
+.cabout_box .c_more navigator{
+  float: right;
+}
+.cabout_box .c_more .goto{
+  width:40rpx;
+}
+
+.cpro_box .cnav {
+border-radius:10rpx;
+}
+.cpro_box .cnav{
+  width:48%;
+}
+
+.cpro_box .nav-name{
+  height: 50rpx;
+    line-height: 50rpx;
+    color: #555;
+    border-top: 1px solid #e5e5e5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cnav_box .cpro_more{
+color:#1c7ac9;
+border:1px solid #1c7ac9;
+margin:0px auto;
+width:200rpx;
+height:50rpx;
+text-align:center;
+line-height:50rpx;
+font-size:14px;
+}
+
+
+
+.scroll-view_H{
+    white-space:nowrap;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.banner-scroll{
+    margin-top:2px;
+}
+
+.banner-scroll repeat{
+    margin-bottom:10px;
+}
+
+
+
+.nav-hover{
+    color: #f06000;
+    border-bottom: 2px solid #f06000;
+}
+
+
+
+
+
+.textRollLink{
+    margin:10px;
+    background-color:#fff;
+    height:38px;
+}
+
+.Rollswiper{
+    height:38px;
+}
+
+.RollImage{
+    width:38px;
+    height:38px;
+    margin: 0 4px;
+}
+
+.Rolltxt{
+    color:#222;
+    font-size:14px;
+}
+
+.RollImage,
+.Rolltxt {
+    vertical-align: middle;
+}
+
+.listNews{
+    margin:10px 8px 0;
+	background:#fff;
+border:#ddd 1px solid;
+padding:15px;
+box-shadow:0 2px 3px rgba(0, 0, 0, 0.04);
+
+}
+
+.listNews .listTitle{
+    display: flex;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+
+
+.listNews:before{
+    content:'';
+    width:4px;
+    background:#b70000;
+float:left;
+margin-left:-15px;
+    height:20px;
+    align-self:center;
+}
+
+.listNews .listTitle .text{
+   height: 52px;
+    font-size:15px;
+	font-weight:bold;
+color:#444;
+    text-align: justify;
+    word-break: break-all;
+    overflow: hidden;
+}
+.listNews .pl{
+margin-right:10px;
+float:right;
+}
+.listNews .entry-content{
+font-size:13px;
+color:#999;
+}
+.listNews .listTitle .more{
+    color:#f06000;
+    font-size:12px;
+}
+
+.listNews .list-flex{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    flex-wrap:wrap;
+}
+
+.listNews .listBox{
+    width:100px;
+   margin: 0 10px 0 0;
+    float: left;
+}
+
+.listNews .listBox .boxPic{
+    height:75px;
+    position:relative;
+}
+
+.listNews .listBox image{
+    width:100%;
+    height:95px;
+    border-radius: 4px;
+}
+
+.listNews .listBox .boxPic .time{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 3px 8px;
+    font-size: 12px;
+    color: #fff;
+    background-color: rgba(0,0,0,.6);
+    border-radius: 4px 0 4px 0;
+}
+
+.listNews .listBox .boxPic .icon{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 37px;
+    height: 37px;
+}
+
+.listNews .listBox .boxTitle1,
+.listNews .listBox .boxTitle2{
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.listNews .listBox .boxTitle1{
+    height: 20px;
+    margin-top: 2px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #222;
+}
+
+.listNews .listBox .boxTitle2{
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #999;
+}
+
+.listBigNews{
+    margin:10px 8px 0;
+}
+
+.listBigNews .listTitle{
+    position: relative;
+    font-size: 16px;
+    color: #222;
+    height:18px;
+}
+
+.listBigNews .listTitle:before{
+    content:'';
+    width:2px;
+    background:#f06000;
+    border-radius: 2px;
+    display:inline-block;
+    margin: 2px 4px 0 0;
+    height:14px;
+}
+
+.listBigNews .listBox{
+    margin-top:8px;
+
+}
+
+.listBigNews .listBox image{
+    border-radius: 4px;
+    width:100%;
+    height:155px;
+}
+
+.listBigNews .listBox .listText{
+    height: 20px;
+    margin-top: 2px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #222;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.textLink{
+    text-align: center;
+    color: #f06000;
+    width: 100%;
+    height: 18px;
+    display: block;
+    line-height: 18px;
+    padding: 8px 0 10px;
+    color: #f06000;
+    border-bottom: 1px solid #dfdfdf;
+    font-size:14px;
+}
+
+.textLink text{
+    vertical-align: middle;
+    padding-right: 4px;
+}
+
+.textLink .linkPic{
+    width:14px;
+    height:14px;
+    vertical-align: middle;
+}
+
+.roundAvatorText{
+    margin: 15px 0 10px;
+    padding: 0 8px;
+    text-align:center;
+}
+
+
+.roundAvatorText .roundList{
+    width:25%;
+    display:inline-block;
+}
+
+.roundAvatorText image{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
+
+
+.roundAvatorText text{
+    display:block;
+    color: #999;
+    font-size: 13px;
+    padding: 5px 0 0;
+    height: 16px;
+    line-height: 18px;
+}
+
+.listNews{
+    margin:10px 8px 0;
+	background:#fff;
+border:#ddd 1px solid;
+padding:15px;
+box-shadow:0 2px 3px rgba(0, 0, 0, 0.04);
+
+}
+
+.listNews .listTitle{
+    display: flex;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+
+
+.listNews:before{
+    content:'';
+    width:4px;
+    background:#b70000;
+float:left;
+margin-left:-15px;
+    height:20px;
+    align-self:center;
+}
+
+.listNews .listTitle .text{
+   height:20px;
+    font-size:14px;
+    color:#444;
+    text-align: justify;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+.listNews .listsmalltext{
+   height:36px;
+    overflow:hidden;
+    line-height:16px;
+    text-overflow:ellipsis;
+}
+.listNews .listsmalltext .text{
+    font-size:12px;
+    color:#999;
+    text-align: justify;
+
+}
+.listNews .pl{
+margin-right:10px;
+float:right;
+}
+.listNews .entry-content{
+font-size:12px;
+margin-right:20rpx;
+color:#999;
+}
+.listNews .entry-content1{
+font-size:12px;
+color:#999;
+}
+.tubiao{
+  width:17px;
+vertical-align:middle;
+}
+.listNews .listTitle .more{
+    color:#f06000;
+    font-size:12px;
+}
+
+.listNews .list-flex{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    flex-wrap:wrap;
+}
+
+.listNews .listBox{
+    width:100px;
+   margin: 0 10px 0 0;
+    float: left;
+}
+
+.listNews .listBox .boxPic{
+    height:75px;
+    position:relative;
+}
+
+.listNews .listBox image{
+    width:100%;
+    height:95px;
+    border-radius: 4px;
+}
+
+.listNews .listBox .boxPic .time{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 3px 8px;
+    font-size: 12px;
+    color: #fff;
+    background-color: rgba(0,0,0,.6);
+    border-radius: 4px 0 4px 0;
+}
+
+.listNews .listBox .boxPic .icon{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 37px;
+    height: 37px;
+}
+
+.listNews .listBox .boxTitle1,
+.listNews .listBox .boxTitle2{
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.listNews .listBox .boxTitle1{
+    height: 20px;
+    margin-top: 2px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #222;
+}
+
+.listNews .listBox .boxTitle2{
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #999;
+}
+
+.listBigNews{
+    margin:10px 8px 0;
+}
+
+.listBigNews .listTitle{
+    position: relative;
+    font-size: 16px;
+    color: #222;
+    height:18px;
+}
+
+.listBigNews .listTitle:before{
+    content:'';
+    width:2px;
+    background:#f06000;
+    border-radius: 2px;
+    display:inline-block;
+    margin: 2px 4px 0 0;
+    height:14px;
+}
+
+.listBigNews .listBox{
+    margin-top:8px;
+
+}
+
+.listBigNews .listBox image{
+    border-radius: 4px;
+    width:100%;
+    height:155px;
+}
+
+.listBigNews .listBox .listText{
+    height: 20px;
+    margin-top: 2px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #222;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+
+
+

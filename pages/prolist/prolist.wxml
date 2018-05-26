@@ -1,0 +1,64 @@
+<import src="../../common/template.wxml"/>
+<import src="../../wxParse/wxParse.wxml"/> 
+<!--轮播图开始-->
+    <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+        <block wx:for="{{ban}}" wx:key="key">
+            <swiper-item>
+                <image src="{{item.titlepic}}" class="slide-image" mode="widthFix"/>
+            </swiper-item>
+        </block>
+    </swiper>
+<!--end-->
+<!--分类开始-->
+<view class="index" wx:if="{{section}}">
+    <view class="nav-scroll">
+        <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+         <block wx:for="{{section}}" wx:key="key">
+            <navigator url="{{item.xcxurl}}" style="display:initial">
+             <text class="nav-name {{item.classid == navclassid ? 'nav-hover' : ''}}">{{item.classname}}</text></navigator>
+             </block>
+        </scroll-view>
+    </view>
+     </view>
+<!--分类结束-->
+<!--列表-->
+<view class="cnav_box" wx:if="{{list}}">
+<view class="cpro_box" >
+ <block wx:for="{{list}}" wx:key="key">
+        <view class="cnav">
+            <navigator url="../view/view?classid={{item.classid}}&id={{item.id}}">
+              <image src="{{item.titlepic}}"  mode="widthFix"/>
+             <text class="nav-name">{{item.title}}</text>
+             </navigator>
+             </view>
+              </block>
+          </view>
+ </view>
+ <view wx:else style="margin:50rpx auto;">
+ <template is="message" data="{{hidd}}"/>
+</view>
+  <!--end-->
+  <!--page-->
+ <view class="button-wrapper" wx:if="{{pageIndex < pageTotal}}"> 
+ <button type="default" bindtap="setLoading" data-page="{{nextpage}}"> 
+加载更多
+ </button> 
+</view> 
+<view wx:elif="{{pageTotal == 1 || pageTotal == 0}}">
+</view>
+<view wx:else style="margin:30rpx auto;">
+  <template is="pagemessage" data="{{hidd}}"/>
+</view>
+<!--pageend-->
+   <template is="xinlingdi" data="{{hidd}}"/>
+
+   <template is="loadings" data="{{loading,loadtxt}}" />
+
+<!--悬浮客服-->
+ <view>  
+  <contact-button type="default-dark" size="20" session-from="weapp" class="img-plus-style zindex100 yc">
+</contact-button>
+  <image src="../../image/xk_kefu.png" class="img-plus-style"></image> 
+  <image src="../../image/xk_tel.png" class="img-plus-style1" bindtap="calling"></image>
+</view>

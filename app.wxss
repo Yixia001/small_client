@@ -1,0 +1,121 @@
+@import "/wxParse/wxParse.wxss";
+page {
+    font-family:"Microsoft YaHei", Helvetica, Arial, Lucida Grande, Tahoma, sans-serif;
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.swiper_box .slide-image{  
+  width: 750rpx;    
+}  
+.swiper_box{
+   width: 750rpx;    
+   height:400rpx;
+}
+.ft10{
+    font-size:10px;
+}
+
+
+.fl{
+    float:left;
+}
+
+.fr{
+    float:right;
+}
+
+.tips {
+    font-size: 18px;
+    text-align: center;
+    padding: 50px;
+    color: #ccc;
+    font-weight:100;
+}
+
+.tips image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.tips image,
+.tips text {
+    vertical-align: middle;
+}
+
+.hide{
+    display:none!important;
+}
+
+.show{
+    display:block;
+}
+.copyright{
+  font-size: 14px;
+  display: block;
+  margin: 20rpx auto;
+}
+.copyright text{text-align: center;display:block;}
+.message{ font-size: 14px;
+  display: block;
+  margin: 50rpx auto;
+  text-align: center;
+  /*width:280rpx;*/
+  }
+.error{
+  width:20px;
+  vertical-align:middle;
+float:left;
+margin-right: 5px;
+
+}
+.errortxt{
+line-height:20px;
+display:block;
+float:right;
+}
+.button-wrapper{
+  width:50%;
+margin:auto;
+}
+.button-wrapper button{font-size: 14px;}
+
+.scroll-view_H{
+    white-space:nowrap;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.nav-name{
+    display:inline-block;
+    margin:0 5px;
+    font-size:16px;
+    color: #2b2e33;
+    border-bottom: 2px solid transparent;
+    padding:10px;
+}
+.nav-hover{
+    color: #f06000;
+    border-bottom: 2px solid #f06000;
+}
+
+.img-plus-style {  
+  height: 70rpx;  
+  width: 70rpx;  
+  position: fixed;  
+  bottom: 220rpx;  
+  right: 30rpx;  
+  opacity: 0.7
+}  
+.img-plus-style1 {  
+  height: 70rpx;  
+  width: 70rpx;  
+  position: fixed;  
+  bottom: 130rpx;  
+  right: 30rpx;   
+  opacity: 0.7
+}  
+.zindex100{z-index: 100}
+.yc{opacity: 0}

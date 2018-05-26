@@ -1,0 +1,69 @@
+<import src="../../common/template.wxml"/>
+<import src="../../wxParse/wxParse.wxml"/> 
+<!--轮播图开始-->
+    <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+        <block wx:for="{{ban}}" wx:key="key">
+            <swiper-item>
+                <image src="{{item.titlepic}}" class="slide-image" mode="widthFix"/>
+            </swiper-item>
+        </block>
+    </swiper>
+<!--end-->
+<!--分类开始-->
+<view class="index" wx:if="{{section}}">
+    <view class="nav-scroll">
+        <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+         <block wx:for="{{section}}" wx:key="key">
+            <navigator url="{{item.xcxurl}}" style="display:initial">
+             <text class="nav-name {{item.classid == navclassid ? 'nav-hover' : ''}}">{{item.classname}}</text></navigator>
+             </block>
+        </scroll-view>
+    </view>
+     </view>
+<!--分类结束-->
+<!--列表-->
+<view wx:if="{{list}}">
+ <block wx:for="{{list}}" wx:key="key">
+  <view class="listNews" >
+   <navigator url="../view/view?classid={{item.classid}}&id={{item.id}}" class="roundList" >
+   <view wx:if="{{item.titlepic}}" class="listBox">
+   <image src="{{item.titlepic}}" data-id="{{item.b}}"  class="boxPic" width="100%" height="100%"/>
+   </view>
+   <view wx:else>
+    </view>
+   <view class="listTitle">
+   <text class="text">{{item.title}}</text>
+   </view>
+   <view class="listsmalltext">
+   <text class="text">{{item.smalltext}}</text>
+   </view>
+    <view class="pl">
+    <image src="../../image/time.png" mode="widthFix" class="tubiao" />
+   <text class="entry-content">{{item.newstime}}</text>
+    <image src="../../image/hot.png" mode="widthFix" class="tubiao" />
+    <text class="entry-content1">{{item.onclick}}</text>
+   </view>
+     </navigator>
+  </view>
+ </block>
+</view>
+<view wx:else style="margin:50rpx auto;">
+ <template is="message" data="{{hidd}}"/>
+</view>
+  <!--end-->
+  <!--page-->
+ <view class="button-wrapper" wx:if="{{pageIndex < pageTotal}}"> 
+ <button type="default" bindtap="setLoading" data-page="{{nextpage}}"> 
+加载更多
+ </button> 
+</view> 
+<view wx:elif="{{pageTotal == 1 || pageTotal == 0}}">
+</view>
+<view wx:else style="margin:30rpx auto;">
+  <template is="pagemessage" data="{{hidd}}"/>
+</view>
+<!--pageend-->
+   <template is="xinlingdi" data="{{hidd}}"/>
+   <template is="loadings" data="{{loading,loadtxt}}" />
+

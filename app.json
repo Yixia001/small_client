@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/store/store",
+    "pages/personal/personal",
+    "pages/test/test",
+    "pages/map/map",
+    "pages/index/index",
+    "pages/view/view",
+    "pages/pro/pro",
+    "pages/news/news",
+    "pages/newslist/newslist",
+    "pages/prolist/prolist",
+    "pages/contact/contact"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#2b2e33",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "驿站",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#74777e",
+    "selectedColor": "#f06000",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/test/test",
+        "iconPath": "image/map.png",
+        "selectedIconPath": "image/mapselect.png",
+        "text": "地图导航"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "iconPath": "image/product.png",
+        "selectedIconPath": "image/productselct.png",
+        "text": "集结驿站"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "image/tel.png",
+        "selectedIconPath": "image/telselect.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

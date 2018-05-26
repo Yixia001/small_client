@@ -1,0 +1,37 @@
+<import src="../../common/template.wxml"/>
+<import src="../../wxParse/wxParse.wxml"/> 
+
+<!--轮播图开始-->
+    <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+        <block wx:for="{{ban}}" wx:key="key">
+            <swiper-item>
+                <image src="{{item.titlepic}}" class="slide-image" mode="widthFix"/>
+            </swiper-item>
+        </block>
+    </swiper>
+<!--end-->
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" class="list" bindscrolltolower="bindDownLoad" bindscroll="scroll" bindscrolltoupper="refresh" >
+<view wx:for="{{Content}}" class="wxParse" wx:key="key">
+<view class="Content">
+   <text class="wxParse-h1">{{item.title}}</text>
+   <view class="tip1"><text class="time">{{item.newstime}}</text>
+   </view>
+ <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  <view class="tip2"><text class="time">浏览：{{item.onclick}}</text><text class="time" style="margin-right:0;">分类：</text>
+   <navigator url="{{item.xcxurl}}" style="display:initial"><text class="time link"> {{item.classname}}</text></navigator>
+   </view>
+ </view>
+</view>
+</scroll-view>
+
+ <template is="xinlingdi" data="{{hidd}}"/>
+   <template is="loadings" data="{{loading,loadtxt}}" />
+
+<!--悬浮客服-->
+ <view>  
+  <contact-button type="default-dark" size="20" session-from="weapp" class="img-plus-style zindex100 yc">
+</contact-button>
+  <image src="../../image/xk_kefu.png" class="img-plus-style"></image> 
+  <image src="../../image/xk_tel.png" class="img-plus-style1" bindtap="calling"></image>
+</view>

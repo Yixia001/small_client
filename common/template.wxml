@@ -1,0 +1,27 @@
+
+
+<!-- loading 和列表部分  -->
+
+<template name="loadings">
+    <loading hidden="{{loading}}">
+        {{loadtxt}}...
+    </loading>
+</template>
+
+<template name="xinlingdi">
+    <view class="copyright" hidden="{{hidd}}">
+      <text>© 浩萨体育 版权所有</text>
+    </view>
+</template>
+<template name="message" >
+ <view  hidden="{{hidd}}" class="message">
+    <image src="../../image/message.png" mode="widthFix" class="error" />
+<text class="errortxt">暂无相关内容...</text>
+      </view>
+</template>
+<template name="pagemessage" >
+ <view  hidden="{{hidd}}" class="message">
+    <image src="../../image/message.png" mode="widthFix" class="error" />
+<text class="errortxt">没有更多数据了...</text>
+      </view>
+</template>

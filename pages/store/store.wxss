@@ -1,0 +1,340 @@
+.scroll-view_H{
+    white-space:nowrap;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.banner-scroll{
+    margin-top:2px;
+}
+
+.banner-scroll repeat{
+    margin-bottom:10px;
+}
+
+.nav-name{
+    display:inline-block;
+    margin:0 5px;
+    font-size:16px;
+    color: #2b2e33;
+    border-bottom: 2px solid transparent;
+    padding:10px;
+}
+
+.nav-hover{
+    color: #f06000;
+    border-bottom: 2px solid #f06000;
+}
+
+
+
+
+
+.textRollLink{
+    margin:10px;
+    background-color:#fff;
+    height:38px;
+}
+
+.Rollswiper{
+    height:38px;
+
+}
+
+.RollImage{
+    width:38px;
+    height:38px;
+    margin: 0 4px;
+}
+
+.Rolltxt{
+    color:#222;
+    font-size:14px;
+}
+
+.RollImage,
+.Rolltxt {
+    vertical-align: middle;
+}
+
+.listNews{
+
+	background:#fff;
+padding:15px;
+box-shadow:0 2px 3px rgba(0, 0, 0, 0.04);
+
+}
+
+.listNews .listTitle{
+    display: flex;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+
+
+.listNews:before{
+    content:'';
+    width:4px;
+    background:#b70000;
+float:left;
+margin-left:-15px;
+    height:20px;
+    align-self:center;
+}
+
+.listNews .listTitle .text{
+   height:25px;
+    font-size:16px;
+    color:#444;
+    text-align: justify;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+font-weight: bold;
+}
+.listNews .listsmalltext{
+   height:36px;
+    overflow:hidden;
+    line-height:16px;
+    text-overflow:ellipsis;
+}
+.listNews .listsmalltext .text{
+    font-size:12px;
+    color:#999;
+    text-align: justify;
+
+}
+.listNews .tel{
+margin-right:10px;
+float:left;
+}
+.listNews .entry-content{
+font-size:14px;
+margin-left:10rpx;
+color:#333;
+}
+.listNews .entry-content1{
+font-size:12px;
+color:#999;
+}
+.tubiao{
+  width:17px;
+vertical-align:middle;
+}
+.address{
+  width:100%;
+  margin-top: 10px;
+  overflow:hidden;
+  height:30px;
+
+}
+.address .entry-content{
+  font-size:15px;
+}
+.address .left{
+  float: left;
+  height:30px;
+  width:100%;
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+}
+.address .right .juli{
+    font-size:14px;
+    background: #f60;
+    color: #fff;
+    padding:2px 5px;
+    border-radius:4px;
+}
+.navli{margin-top:10px;}
+.navli .tubiao{
+   width:20px;
+}
+.navli .navli1,.navli .navli2,.navli .navli3{
+  width:33%;
+  height:35px;
+  line-height:35px;
+  float: left;
+  text-align: center;
+  color: #fff;
+}
+.navli .navli1 .entry-content,.navli .navli2 .entry-content,.navli .navli3 .entry-content{
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  font-family:"Microsoft YaHei", Helvetica, Arial, Lucida Grande, Tahoma, sans-serif;
+}
+.navli .navli1,.navli .navli3{
+  background: #0499D1;
+}
+.navli .navli2{
+  background: #F1BA07;
+}
+.listNews .listTitle .more{
+    color:#f06000;
+    font-size:12px;
+}
+
+.listNews .list-flex{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    flex-wrap:wrap;
+}
+
+.listNews .listBox{
+    width:100px;
+   margin: 0 10px 0 0;
+    float: left;
+}
+
+.listNews .listBox .boxPic{
+    height:75px;
+    position:relative;
+}
+
+.listNews .listBox image{
+    width:100%;
+    height:95px;
+    border-radius: 4px;
+}
+
+.listNews .listBox .boxPic .time{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 3px 8px;
+    font-size: 12px;
+    color: #fff;
+    background-color: rgba(0,0,0,.6);
+    border-radius: 4px 0 4px 0;
+}
+
+.listNews .listBox .boxPic .icon{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 37px;
+    height: 37px;
+}
+
+.listNews .listBox .boxTitle1,
+.listNews .listBox .boxTitle2{
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.listNews .listBox .boxTitle1{
+    height: 20px;
+    margin-top: 2px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #222;
+}
+
+.listNews .listBox .boxTitle2{
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #999;
+}
+
+.listBigNews{
+    margin:10px 8px 0;
+}
+
+.listBigNews .listTitle{
+    position: relative;
+    font-size: 16px;
+    color: #222;
+    height:18px;
+}
+
+.listBigNews .listTitle:before{
+    content:'';
+    width:2px;
+    background:#f06000;
+    border-radius: 2px;
+    display:inline-block;
+    margin: 2px 4px 0 0;
+    height:14px;
+}
+
+.listBigNews .listBox{
+    margin-top:8px;
+
+}
+
+.listBigNews .listBox image{
+    border-radius: 4px;
+    width:100%;
+    height:155px;
+}
+
+.listBigNews .listBox .listText{
+    height: 20px;
+    margin-top: 2px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #222;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.textLink{
+    text-align: center;
+    color: #f06000;
+    width: 100%;
+    height: 18px;
+    display: block;
+    line-height: 18px;
+    padding: 8px 0 10px;
+    color: #f06000;
+    border-bottom: 1px solid #dfdfdf;
+    font-size:14px;
+}
+
+.textLink text{
+    vertical-align: middle;
+    padding-right: 4px;
+}
+
+.textLink .linkPic{
+    width:14px;
+    height:14px;
+    vertical-align: middle;
+}
+
+.roundAvatorText{
+    margin: 15px 0 10px;
+    padding: 0 8px;
+    text-align:center;
+}
+
+
+.roundAvatorText .roundList{
+    width:25%;
+    display:inline-block;
+}
+
+.roundAvatorText image{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+}
+
+
+.roundAvatorText text{
+    display:block;
+    color: #999;
+    font-size: 13px;
+    padding: 5px 0 0;
+    height: 16px;
+    line-height: 18px;
+}

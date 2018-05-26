@@ -1,0 +1,68 @@
+<import src="../../common/template.wxml"/>
+<import src="../../wxParse/wxParse.wxml"/> 
+<!--轮播图开始-->
+    <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+        <block wx:for="{{ban}}" wx:key="key">
+            <swiper-item>
+                <image src="{{item.titlepic}}" class="slide-image" mode="widthFix"/>
+            </swiper-item>
+        </block>
+    </swiper>
+<!--end-->
+
+<!--列表-->
+<view wx:if="{{list}}" hidden="{{hidd}}">
+ <block wx:for="{{list}}" wx:key="key">
+  <view class="listNews" >
+  
+   <view wx:if="{{item.titlepic}}" class="listBox">
+   <image src="{{item.titlepic}}" data-id="{{item.b}}"  class="boxPic" width="100%" height="100%"/>
+   </view>
+   <view wx:else>
+    </view>
+   <view class="listTitle">
+   <text class="text">{{item.title}}</text>
+   </view>
+  
+   <view class="tel">
+    <image src="../../image/mobile.png" mode="widthFix" class="tubiao" />
+   <text class="entry-content">{{item.tel}}</text>
+   </view>
+    <view class="address">
+    <view class="left">
+    <image src="../../image/dizhi.png" mode="widthFix" class="tubiao" />
+   <text class="entry-content">{{item.address}}</text>
+    </view>
+    <view class="right">
+   <text class="juli">{{item.juli}}</text>
+    </view>
+   </view>
+   <view class="navli">
+       <view class="navli1">
+    <navigator url="../view/view?classid={{item.classid}}&id={{item.id}}" class="roundList" >
+    <image src="../../image/ico1.png" mode="widthFix" class="tubiao" />
+   <text class="entry-content">商家详情</text>
+     </navigator>
+         </view>
+    <view class="navli2" bindtap="calling" data-tel="{{item.tel}}">
+    <image src="../../image/ico2.png" mode="widthFix" class="tubiao" />
+   <text class="entry-content">一键拨号</text>
+    </view>
+     <view class="navli3" bindtap="map" data-add="{{item.address}}" data-name="{{item.title}}" data-jingdu="{{item.jingdu}}" data-weidu="{{item.weidu}}">
+    <image src="../../image/ico3.png" mode="widthFix" class="tubiao" />
+   <text class="entry-content">一键导航</text>
+    </view>
+    
+   </view>
+    
+  </view>
+ </block>
+</view>
+<view wx:else style="margin:50rpx auto;">
+ <template is="message" data="{{hidd}}"/>
+</view>
+  <!--end-->
+   <template is="xinlingdi" data="{{hidd}}"/>
+   <template is="loadings" data="{{loading,loadtxt}}" />
+
