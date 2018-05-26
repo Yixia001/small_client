@@ -52,8 +52,8 @@ Page({
         console.log(markers)
         that.setData({
           markers: markers,
-          latitude: listData[0].weidu,
-          longitude: listData[0].jingdu
+          // latitude: listData[0].weidu,
+          // longitude: listData[0].jingdu
         })
         wx.getLocation({
           type: 'wgs84',
@@ -61,8 +61,8 @@ Page({
             var latitude = res.latitude
             var longitude = res.longitude
             that.setData({
-              // latitude: latitude,
-              // longitude: longitude
+              latitude: latitude,
+              longitude: longitude
             })
           }
         })

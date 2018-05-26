@@ -74,7 +74,9 @@ page {
   border-radius: 50%;
 }
 
-.persional-header .info .header-img image {
+.persional-header .info .header-img open-data {
+  overflow:hidden;
+  display:block;
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -108,11 +110,11 @@ page {
   font-size: 0;
 }
 
-.persional-header .name .username text {
+.persional-header .name .username open-data {
   font-size: 14px;
 }
 
-.persional-header .name .username text:last-child {
+.persional-header .name .username open-data:last-child {
   position: absolute;
   margin-top: -5px;
   margin-left: 24rpx;
